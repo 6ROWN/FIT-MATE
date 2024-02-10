@@ -1,6 +1,5 @@
 import { ExerciseProps } from "../types";
-
-const rapidApiKey = "61b426f4b5mshe584380871579ddp1e8795jsn640bae4618f6";
+import { RAPID_API_KEY } from "@env";
 
 const baseUrl = "https://exercisedb.p.rapidapi.com/";
 
@@ -11,7 +10,7 @@ const apiCall = async (url: string, params?: string) => {
 		const options = {
 			method: "GET",
 			headers: {
-				"X-RapidAPI-Key": rapidApiKey,
+				"X-RapidAPI-Key": RAPID_API_KEY,
 				"X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
 			},
 		};
